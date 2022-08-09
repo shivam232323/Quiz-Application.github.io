@@ -22,9 +22,13 @@ exit_btn.onclick = ()=>{
 
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
+
+    randomValues();
+
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.add("activeQuiz"); //show quiz box
-    randomValues();
+    console.log(randomArray)    
+
     showQuetions(randomArray[position]); //calling showQestions function          
     queCounter(1); //passing 1 parameter to queCounter
     startTimer(15); //calling startTimer function
@@ -47,16 +51,15 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
     result_box.classList.remove("activeResult"); //hide result box
+    randomValues();
     timeValue = 15; 
     que_count = 0;
     que_numb = 1;
     userScore = 0;
     widthValue = 0;
-    randomValues();
     console.log(randomArray)    
     position  = 0; 
-    showQuetions(randomArray[position]); //calling showQestions function
-    
+    showQuetions(randomArray[position]); //calling showQestions function 
     queCounter(que_numb); //passing que_numb value to queCounter
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
