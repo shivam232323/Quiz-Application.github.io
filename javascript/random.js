@@ -1,8 +1,8 @@
-let setValue =  new Set();
 let randomArray = [];
 
 function randomValues()
 {
+    let setValue =  new Set();
 
     let i =0;
 
